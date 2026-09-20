@@ -1,0 +1,63 @@
+{
+  "slowMs": 5000,
+  "timeoutMs": 20000,
+  "staleHours": 14,
+  "apps": [
+    {
+      "id": "chante-diary",
+      "name": "생기부 프로그램",
+      "desc": "chante-diary",
+      "pages": "https://jeondemo.github.io/chante-diary/",
+      "gas": "PASTE_GAS_EXEC_URL",
+      "links": { "github": "https://github.com/jeondemo/chante-diary" }
+    },
+    {
+      "id": "neis-check-teacher",
+      "name": "생기부 점검기 · 교사용",
+      "desc": "neis-check · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check/",
+      "gas": "",
+      "links": { "github": "https://github.com/jeondemo/neis-check" }
+    },
+    {
+      "id": "neis-check-admin",
+      "name": "생기부 점검기 · 관리자용",
+      "desc": "neis-check-admin · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check-admin/",
+      "gas": "",
+      "links": { "github": "https://github.com/jeondemo/neis-check-admin" }
+    },
+    {
+      "id": "school-bus",
+      "name": "스쿨버스 출석체크",
+      "desc": "school-bus-attendance · 알림톡 연동",
+      "pages": "https://jeondemo.github.io/school-bus-attendance/",
+      "gas": "PASTE_GAS_EXEC_URL",
+      "links": { "github": "https://github.com/jeondemo/school-bus-attendance" }
+    },
+    {
+      "id": "sangdam",
+      "name": "진학상담 프로그램",
+      "desc": "sangdam",
+      "pages": "https://jeondemo.github.io/sangdam/",
+      "gas": "PASTE_GAS_EXEC_URL",
+      "links": { "github": "https://github.com/jeondemo/sangdam" }
+    },
+    {
+      "id": "yaja",
+      "name": "야자관리",
+      "desc": "night-study-attendance · QR 체크인",
+      "pages": "https://jeondemo.github.io/night-study-attendance/",
+      "gas": "PASTE_GAS_EXEC_URL",
+      "links": { "github": "https://github.com/jeondemo/night-study-attendance" }
+    },
+    {
+      "id": "student-finder",
+      "name": "학생관리",
+      "desc": "student-finder",
+      "pages": "https://jeondemo.github.io/student-finder/",
+      "gas": "PASTE_GAS_EXEC_URL",
+      "links": { "github": "https://github.com/jeondemo/student-finder" }
+    }
+  ]
+}

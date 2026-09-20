@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1B1B1A">
+<title>앱 상태 모니터</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F4F3EE;--ink:#1B1B1A;--muted:#6F6E69;--line:#E4E2DB;--card:#FFFFFF;
+  --ok:#1E8E5A;--ok-bg:#EAF6EF;--ok-ink:#14603D;
+  --warn:#C07A00;--warn-bg:#FBF1DC;--warn-ink:#7A4D00;
+  --fail:#C92F27;--fail-bg:#FBE9E7;--fail-ink:#8E1F19;
+  --none:#B9B7AE;--none-bg:#EFEEE9;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans KR',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.wrap{max-width:1200px;margin:0 auto}
+header{background:var(--ink);color:#F4F3EE;padding:calc(20px + env(safe-area-inset-top)) 20px 18px}
+header .wrap{display:flex;flex-direction:column;gap:16px}
+.top{display:flex;align-items:center;justify-content:space-between}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:#A8A69E;font-weight:500}
+h1{margin:2px 0 0;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.iconbtn{width:44px;height:44px;border-radius:12px;border:1px solid #3A3A37;background:#2A2A27;color:#F4F3EE;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.meta{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.meta .label{font-size:12px;color:#A8A69E}
+.meta .time{font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.meta .sub{font-size:12px;color:#A8A69E}
+.counts{display:flex;gap:6px}
+.count{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:52px;padding:8px 6px;border-radius:10px;color:#fff}
+.count b{font-size:20px;font-weight:700;line-height:1}
+.count span{font-size:11px;font-weight:500}
+.count.ok{background:var(--ok)}.count.warn{background:var(--warn)}.count.fail{background:var(--fail)}
+main{padding:14px 20px 40px}
+main .wrap{display:flex;flex-direction:column;gap:10px}
+.banner{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;font-size:13px;font-weight:500;line-height:1.35}
+.banner.fail{background:var(--fail-bg);border:1px solid #F0C2BD;color:var(--fail-ink)}
+.banner.warn{background:var(--warn-bg);border:1px solid #ECDDB8;color:var(--warn-ink)}
+.banner svg{flex-shrink:0}
+.listhead{display:flex;align-items:center;justify-content:space-between;padding:6px 2px 0;font-size:13px;color:var(--muted)}
+.listhead b{font-weight:600}
+.legend{display:flex;gap:10px;font-size:12px}
+.legend span{display:flex;align-items:center;gap:4px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}
+.dot.ok{background:var(--ok)}.dot.warn{background:var(--warn)}.dot.fail{background:var(--fail)}.dot.none,.dot.skip{background:var(--none)}
+.grid{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+.card{display:flex;border-radius:14px;background:var(--card);border:1px solid var(--line);overflow:hidden;box-shadow:0 1px 2px rgba(27,27,26,.04);width:100%;text-align:left;padding:0;cursor:pointer}
+.card.fail{border-color:#E9C4C0}.card.warn{border-color:#ECDDB8}
+.bar{width:6px;flex-shrink:0}
+.bar.ok{background:var(--ok)}.bar.warn{background:var(--warn)}.bar.fail{background:var(--fail)}
+.body{flex-grow:1;padding:14px 14px 12px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.name{font-size:16px;font-weight:600}
+.desc{font-size:12px;color:var(--muted);margin-top:2px}
+.badge{padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.badge.ok{background:var(--ok-bg);color:var(--ok-ink)}
+.badge.warn{background:var(--warn);color:#fff}
+.badge.fail{background:var(--fail);color:#fff}
+.pips{display:flex;gap:6px;flex-wrap:wrap}
+.pip{display:flex;align-items:center;gap:5px;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:500;white-space:nowrap}
+.pip.ok{background:var(--ok-bg);color:var(--ok-ink)}
+.pip.warn{background:var(--warn-bg);color:var(--warn-ink)}
+.pip.fail{background:var(--fail-bg);color:var(--fail-ink)}
+.pip.none,.pip.skip{background:var(--none-bg);color:#8A887F}
+.note{font-size:12px;color:var(--muted);white-space:nowrap}
+.note.fail{color:var(--fail-ink);font-weight:500}.note.warn{color:var(--warn-ink);font-weight:500}
+.detail{grid-column:1/-1;display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+.detail h3{margin:0;font-size:13px;font-weight:600;color:var(--muted)}
+.stagelist{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.stage{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-top:1px solid #EFEEE9}
+.stage:first-child{border-top:none}
+.stage.fail{background:#FDF4F3}
+.stage .ic{width:26px;height:26px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff}
+.stage .ic.ok{background:var(--ok)}.stage .ic.warn{background:var(--warn)}.stage .ic.fail{background:var(--fail)}.stage .ic.none,.stage .ic.skip{background:var(--none)}
+.stage .t{font-size:14px;font-weight:600}
+.stage .d{font-size:12px;color:var(--muted);margin-top:2px;word-break:break-all}
+.stage .d.fail{color:var(--fail-ink)}
+.stage .ms{margin-left:auto;font-size:12px;font-weight:600;white-space:nowrap}
+.hist{display:flex;gap:3px}
+.hist i{flex-grow:1;height:22px;border-radius:3px;background:var(--none-bg)}
+.hist i.ok{background:var(--ok)}.hist i.warn{background:var(--warn)}.hist i.fail{background:var(--fail)}
+.histlbl{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.kv{display:flex;flex-direction:column;gap:6px;font-size:13px}
+.kv div{display:flex;justify-content:space-between;gap:12px}
+.kv span:first-child{color:var(--muted)}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{flex-grow:1;min-height:44px;padding:0 14px;border-radius:12px;border:1px solid #D5D3CB;background:#fff;color:var(--ink);font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
+.btn.primary{background:var(--ink);color:#F4F3EE;border-color:var(--ink)}
+.empty{padding:40px 20px;text-align:center;color:var(--muted);font-size:14px}
+footer{padding:0 20px 40px;text-align:center;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="eyebrow">과천여고 · 교무기획부</div>
+        <h1>앱 상태 모니터</h1>
+      </div>
+      <a class="iconbtn" id="runLink" href="#" target="_blank" rel="noopener" aria-label="지금 검사 (GitHub Actions)" title="지금 검사">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"></path><polyline points="21 3 21 9 15 9"></polyline></svg>
+      </a>
+    </div>
+    <div class="meta">
+      <div>
+        <div class="label">마지막 검사</div>
+        <div class="time" id="time">--:--</div>
+        <div class="sub" id="sub">불러오는 중…</div>
+      </div>
+      <div class="counts" id="counts"></div>
+    </div>
+  </div>
+</header>
+
+<main><div class="wrap" id="app"><div class="empty">불러오는 중…</div></div></main>
+<footer id="foot"></footer>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const LABEL = { ok: "정상", warn: "주의", fail: "이상" };
+const STAGE_NAME = { pages: "GitHub Pages", gas: "GAS 웹앱 응답", data: "시트 데이터 읽기" };
+const STAGE_SHORT = { pages: "Pages", gas: "GAS", data: "데이터" };
+const ORDER = { fail: 0, warn: 1, ok: 2 };
+
+const owner = location.hostname.split(".")[0];
+const repo = location.pathname.split("/").filter(Boolean)[0] || "";
+const ghBase = owner && repo ? `https://github.com/${owner}/${repo}` : "";
+if (ghBase) $("#runLink").href = `${ghBase}/actions/workflows/check.yml`;
+
+let STATUS = null, HISTORY = {}, open = null;
+
+function fmtMs(ms) { return ms == null ? "" : ms >= 1000 ? (ms / 1000).toFixed(1) + "s" : ms + "ms"; }
+function fmtTime(iso) {
+  if (!iso) return "-";
+  return new Date(iso).toLocaleString("ko-KR", { timeZone: "Asia/Seoul", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false });
+}
+function ago(iso) {
+  const m = Math.round((Date.now() - new Date(iso)) / 60000);
+  if (m < 60) return `${m}분 전`;
+  const h = Math.floor(m / 60);
+  return h < 48 ? `${h}시간 전` : `${Math.floor(h / 24)}일 전`;
+}
+function weekday(iso) { return new Date(iso).toLocaleString("ko-KR", { timeZone: "Asia/Seoul", weekday: "short" }); }
+
+function icon(state) {
+  if (state === "ok") return '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+  if (state === "fail") return '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+  if (state === "warn") return '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="6" x2="12" y2="13"/><line x1="12" y1="17.5" x2="12.01" y2="17.5"/></svg>';
+  return '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>';
+}
+
+function renderHeader() {
+  const s = STATUS;
+  const stale = (Date.now() - new Date(s.checkedAt)) / 36e5 > (s.staleHours || 14);
+  $("#time").textContent = new Date(s.checkedAt).toLocaleTimeString("ko-KR", { timeZone: "Asia/Seoul", hour: "2-digit", minute: "2-digit", hour12: false });
+  $("#sub").textContent = `${fmtTime(s.checkedAt)} (${weekday(s.checkedAt)}) · ${ago(s.checkedAt)}` + (stale ? " · 갱신 지연" : "");
+  $("#counts").innerHTML = ["ok", "warn", "fail"].map((k) => `<div class="count ${k}"><b>${s.summary[k] || 0}</b><span>${LABEL[k]}</span></div>`).join("");
+  return stale;
+}
+
+function pip(key, st) {
+  const extra = key === "gas" && st.state === "warn" && st.ms ? " " + fmtMs(st.ms) : "";
+  const text = st.state === "none" ? (key === "gas" ? "GAS 없음" : "") : STAGE_SHORT[key] + extra;
+  if (!text) return "";
+  const dot = st.state === "none" ? "" : `<span class="dot ${st.state}"></span>`;
+  return `<span class="pip ${st.state}">${dot}${esc(text)}</span>`;
+}
+
+function cardNote(a) {
+  if (a.overall === "fail") {
+    const days = a.firstFailAt ? Math.max(1, Math.ceil((Date.now() - new Date(a.firstFailAt)) / 864e5)) : 1;
+    return `<span class="note fail">${a.streak > 1 ? `${days}일째 · ${a.streak}회 연속` : "이번 검사 실패"}</span>`;
+  }
+  if (a.overall === "warn") return `<span class="note warn">${esc(a.stages.gas.state === "warn" ? "응답 느림" : "일부 주의")}</span>`;
+  const ms = a.stages.gas.ms ?? a.stages.pages.ms;
+  return `<span class="note">${fmtMs(ms)}${ms != null ? " · " : ""}${fmtTime(STATUS.checkedAt).split(" ").pop()}</span>`;
+}
+
+function card(a) {
+  return `<button class="card ${a.overall}" data-id="${esc(a.id)}" aria-expanded="${open === a.id}">
+    <div class="bar ${a.overall}"></div>
+    <div class="body">
+      <div class="row">
+        <div><div class="name">${esc(a.name)}</div><div class="desc">${esc(a.desc || "")}</div></div>
+        <span class="badge ${a.overall}">${LABEL[a.overall]}</span>
+      </div>
+      <div class="row">
+        <div class="pips">${pip("pages", a.stages.pages)}${pip("gas", a.stages.gas)}${pip("data", a.stages.data)}</div>
+        ${cardNote(a)}
+      </div>
+    </div>
+  </button>`;
+}
+
+function detail(a) {
+  const h = (HISTORY[a.id] || []).slice(-14);
+  const okCount = (HISTORY[a.id] || []).filter((x) => x.s !== "fail").length;
+  const total = (HISTORY[a.id] || []).length;
+  const stages = ["pages", "gas", "data"].map((k) => {
+    const st = a.stages[k];
+    const url = k === "pages" ? a.pages : k === "gas" ? (a.gas || "").replace(/(\/s\/)([^/]{6})[^/]+/, "$1$2…") : "";
+    return `<div class="stage ${st.state}">
+      <div class="ic ${st.state}">${icon(st.state)}</div>
+      <div><div class="t">${STAGE_NAME[k]}</div>
+        ${url ? `<div class="d">${esc(url)}</div>` : ""}
+        <div class="d ${st.state}">${esc(st.detail || (st.state === "skip" ? "건너뜀" : ""))}</div></div>
+      <div class="ms">${st.state === "fail" ? "실패" : st.state === "skip" ? "건너뜀" : st.state === "none" ? "" : fmtMs(st.ms)}</div>
+    </div>`;
+  }).join("");
+  const links = [
+    a.pages ? `<a class="btn" href="${esc(a.pages)}" target="_blank" rel="noopener">앱 열기</a>` : "",
+    a.links && a.links.github ? `<a class="btn" href="${esc(a.links.github)}" target="_blank" rel="noopener">GitHub</a>` : "",
+    a.gas && /script\.google/.test(a.gas) ? `<a class="btn" href="https://script.google.com/home" target="_blank" rel="noopener">GAS 편집기</a>` : "",
+  ].join("");
+  return `<div class="detail" data-detail="${esc(a.id)}">
+    <h3>검사 단계</h3>
+    <div class="stagelist">${stages}</div>
+    <h3>최근 ${h.length}회 검사</h3>
+    <div class="hist">${h.map((x) => `<i class="${x.s}" title="${fmtTime(x.t)} · ${LABEL[x.s]}"></i>`).join("") || "<i></i>"}</div>
+    <div class="histlbl"><span>${h[0] ? fmtTime(h[0].t) : ""}</span><span>${h.length ? fmtTime(h[h.length - 1].t) : ""}</span></div>
+    <div class="kv">
+      <div><span>마지막 정상</span><span>${fmtTime(a.lastOkAt)}</span></div>
+      ${a.firstFailAt ? `<div><span>실패 시작</span><span>${fmtTime(a.firstFailAt)} · ${a.streak}회 연속</span></div>` : ""}
+      <div><span>최근 ${total}회 정상률</span><span>${total ? Math.round((okCount / total) * 100) : 0}% (${okCount}/${total})</span></div>
+    </div>
+    <div class="actions">${links}</div>
+  </div>`;
+}
+
+function render() {
+  const stale = renderHeader();
+  const apps = [...STATUS.apps].sort((a, b) => ORDER[a.overall] - ORDER[b.overall] || a.name.localeCompare(b.name, "ko"));
+  const failing = apps.filter((a) => a.overall === "fail");
+  let html = "";
+  if (stale) html += `<div class="banner fail">${warnIcon()}<div>마지막 검사 후 ${ago(STATUS.checkedAt)} 경과 — 모니터(GitHub Actions) 자체가 실행되지 않고 있을 수 있습니다.</div></div>`;
+  if (failing.length) html += `<div class="banner fail">${warnIcon()}<div>${failing.map((a) => `${esc(a.name)}${a.streak > 1 ? ` ${a.streak}회 연속` : ""}`).join(", ")} — ${esc(failing[0].reason)}</div></div>`;
+  html += `<div class="listhead"><b>전체 앱 ${apps.length}</b><div class="legend"><span><i class="dot ok"></i>정상</span><span><i class="dot warn"></i>주의</span><span><i class="dot fail"></i>이상</span></div></div>`;
+  html += `<div class="grid">` + apps.map((a) => card(a) + (open === a.id ? detail(a) : "")).join("") + `</div>`;
+  $("#app").innerHTML = html;
+  $("#foot").innerHTML = ghBase ? `<a href="${ghBase}/edit/main/apps.json" target="_blank" rel="noopener">앱 목록 수정 (apps.json)</a> · <a href="${ghBase}/actions" target="_blank" rel="noopener">검사 기록</a>` : "";
+  document.querySelectorAll(".card").forEach((el) => el.addEventListener("click", () => { open = open === el.dataset.id ? null : el.dataset.id; render(); }));
+}
+
+function warnIcon() {
+  return '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>';
+}
+
+async function load() {
+  try {
+    const bust = "?t=" + Date.now();
+    const [s, h] = await Promise.all([
+      fetch("status.json" + bust, { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error("status.json " + r.status); return r.json(); }),
+      fetch("history.json" + bust, { cache: "no-store" }).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+    ]);
+    STATUS = s; HISTORY = h;
+    render();
+  } catch (e) {
+    $("#sub").textContent = "아직 검사 결과가 없습니다";
+    $("#app").innerHTML = `<div class="empty">status.json을 불러올 수 없습니다.<br>GitHub Actions에서 "App health check"를 한 번 실행해 주세요.<br><small>${esc(e.message)}</small></div>`;
+  }
+}
+load();
+document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
+</script>
+</body>
+</html>
