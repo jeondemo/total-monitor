@@ -55,8 +55,8 @@
       "id": "sangdam",
       "name": "진학상담 프로그램",
       "desc": "sangdam",
-      "pages": "https://jeondemo.github.io/sangdam/",
-      "gas": "PASTE_GAS_EXEC_URL",
+            "pages": "https://jeondemo.github.io/sangdam/",
+      "gas": "https://script.google.com/macros/s/AKfycbzxy7GmMQSLAatWCKaxDMrwzFXSSOPxJFk4NKskGwgchR3Ma8mwS0fDYeYimOLdRSCBew/exec",
       "links": { "github": "https://github.com/jeondemo/sangdam" }
     },
     {
