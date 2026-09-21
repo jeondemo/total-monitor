@@ -47,8 +47,8 @@
       "id": "school-bus",
       "name": "스쿨버스 출석체크",
       "desc": "school-bus-attendance · 알림톡 연동",
-      "pages": "https://jeondemo.github.io/school-bus-attendance/",
-      "gas": "PASTE_GAS_EXEC_URL",
+            "pages": "https://jeondemo.github.io/school-bus-attendance/",
+      "gas": "https://script.google.com/macros/s/AKfycbzWOjM293h9y95Kxq8AV0PjNLPzt5vt5uu7pXDHJ5Nfz4wL9EpMaXMreSTHiwcBUPiJ/exec",
       "links": { "github": "https://github.com/jeondemo/school-bus-attendance" }
     },
     {
@@ -63,10 +63,20 @@
       "id": "yaja",
       "name": "야자관리",
       "desc": "night-study-attendance · QR 체크인",
-      "pages": "https://jeondemo.github.io/night-study-attendance/",
-      "gas": "PASTE_GAS_EXEC_URL",
+            "pages": "https://jeondemo.github.io/night-study-attendance/",
+      "gas": "https://script.google.com/macros/s/AKfycbyJ-8CLgaGaXezW1QtoOv3tBLj0KqTcRjHa5k6Oq29rDjEsbUINfnMb01gjseb2Ixn0/exec",
       "links": { "github": "https://github.com/jeondemo/night-study-attendance" }
     },
+        {
+      "id": "exam",
+      "name": "시험관리",
+      "desc": "exam-management · 고사 편성·감독 배정",
+      "pages": "",
+      "gas": "https://script.google.com/macros/s/AKfycbyo4DX5OAyTQM0bYi6SkUI3yHP39V-Q7n7xlh0Io2KEO1pcrUaxz7ecPxO68x_oSUam/exec",
+      "links": {}
+    },
+    {
+      "id": "student-finder",
     {
       "id": "student-finder",
       "name": "학생관리",
