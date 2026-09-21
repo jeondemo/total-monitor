@@ -70,9 +70,14 @@ async function checkGas(url) {
   if (!url) return { gas: stage("none", null, "GAS 없음"), data: stage("none", null, "") };
   if (!isRealGasUrl(url)) return { gas: stage("skip", null, "GAS URL 미설정"), data: stage("skip", null, "") };
 
-  const pingUrl = url + (url.includes("?") ? "&" : "?") + "action=ping&_=" + Date.now();
-  const r = await timedFetch(pingUrl);
-
+    const pingUrl = url + (url.includes("?") ? "&" : "?") + "action=ping&_=" + Date.now();
+  let r = await timedFetch(pingUrl);
+  if (r.error || (r.status !== 200 && !/accounts\.google\.com/.test(r.finalUrl || ""))) {
+    await new Promise((ok) => setTimeout(ok, 8000));
+    const retry = await timedFetch(pingUrl);
+    if (!retry.error && retry.status === 200) r = retry;
+    else r.detail = "재시도 후에도 실패";
+  }
   if (r.error) return { gas: stage("fail", r.ms, r.error), data: stage("skip", null, "건너뜀") };
   if (/accounts\.google\.com/.test(r.finalUrl || "")) {
     return {
