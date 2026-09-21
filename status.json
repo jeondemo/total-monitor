@@ -1,0 +1,237 @@
+{
+  "checkedAt": "2026-09-21T00:04:25.049Z",
+  "checkedAtKst": "9. 21. 09:04",
+  "slowMs": 5000,
+  "staleHours": 14,
+  "summary": {
+    "ok": 4,
+    "warn": 0,
+    "fail": 3
+  },
+  "apps": [
+    {
+      "id": "chante-diary",
+      "name": "생기부 프로그램",
+      "desc": "chante-diary",
+      "pages": "https://jeondemo.github.io/chante-diary/",
+      "gas": "PASTE_GAS_EXEC_URL",
+      "links": {
+        "github": "https://github.com/jeondemo/chante-diary"
+      },
+      "stages": {
+        "pages": {
+          "state": "ok",
+          "ms": 187,
+          "detail": "HTTP 200"
+        },
+        "gas": {
+          "state": "skip",
+          "ms": null,
+          "detail": "GAS URL 미설정"
+        },
+        "data": {
+          "state": "skip",
+          "ms": null,
+          "detail": ""
+        }
+      },
+      "overall": "ok",
+      "streak": 0,
+      "lastOkAt": "2026-09-21T00:04:25.049Z",
+      "firstFailAt": null,
+      "reason": ""
+    },
+    {
+      "id": "neis-check-teacher",
+      "name": "생기부 점검기 · 교사용",
+      "desc": "neis-check · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check/",
+      "gas": "",
+      "links": {
+        "github": "https://github.com/jeondemo/neis-check"
+      },
+      "stages": {
+        "pages": {
+          "state": "ok",
+          "ms": 194,
+          "detail": "HTTP 200"
+        },
+        "gas": {
+          "state": "none",
+          "ms": null,
+          "detail": "GAS 없음"
+        },
+        "data": {
+          "state": "none",
+          "ms": null,
+          "detail": ""
+        }
+      },
+      "overall": "ok",
+      "streak": 0,
+      "lastOkAt": "2026-09-21T00:04:25.049Z",
+      "firstFailAt": null,
+      "reason": ""
+    },
+    {
+      "id": "neis-check-admin",
+      "name": "생기부 점검기 · 관리자용",
+      "desc": "neis-check-admin · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check-admin/",
+      "gas": "",
+      "links": {
+        "github": "https://github.com/jeondemo/neis-check-admin"
+      },
+      "stages": {
+        "pages": {
+          "state": "fail",
+          "ms": 75,
+          "detail": "HTTP 404"
+        },
+        "gas": {
+          "state": "none",
+          "ms": null,
+          "detail": "GAS 없음"
+        },
+        "data": {
+          "state": "none",
+          "ms": null,
+          "detail": ""
+        }
+      },
+      "overall": "fail",
+      "streak": 1,
+      "lastOkAt": null,
+      "firstFailAt": "2026-09-21T00:04:25.049Z",
+      "reason": "pages: HTTP 404"
+    },
+    {
+      "id": "school-bus",
+      "name": "스쿨버스 출석체크",
+      "desc": "school-bus-attendance · 알림톡 연동",
+      "pages": "https://jeondemo.github.io/school-bus-attendance/",
+      "gas": "PASTE_GAS_EXEC_URL",
+      "links": {
+        "github": "https://github.com/jeondemo/school-bus-attendance"
+      },
+      "stages": {
+        "pages": {
+          "state": "fail",
+          "ms": 74,
+          "detail": "HTTP 404"
+        },
+        "gas": {
+          "state": "skip",
+          "ms": null,
+          "detail": "GAS URL 미설정"
+        },
+        "data": {
+          "state": "skip",
+          "ms": null,
+          "detail": ""
+        }
+      },
+      "overall": "fail",
+      "streak": 1,
+      "lastOkAt": null,
+      "firstFailAt": "2026-09-21T00:04:25.049Z",
+      "reason": "pages: HTTP 404"
+    },
+    {
+      "id": "sangdam",
+      "name": "진학상담 프로그램",
+      "desc": "sangdam",
+      "pages": "https://jeondemo.github.io/sangdam/",
+      "gas": "PASTE_GAS_EXEC_URL",
+      "links": {
+        "github": "https://github.com/jeondemo/sangdam"
+      },
+      "stages": {
+        "pages": {
+          "state": "ok",
+          "ms": 91,
+          "detail": "HTTP 200"
+        },
+        "gas": {
+          "state": "skip",
+          "ms": null,
+          "detail": "GAS URL 미설정"
+        },
+        "data": {
+          "state": "skip",
+          "ms": null,
+          "detail": ""
+        }
+      },
+      "overall": "ok",
+      "streak": 0,
+      "lastOkAt": "2026-09-21T00:04:25.049Z",
+      "firstFailAt": null,
+      "reason": ""
+    },
+    {
+      "id": "yaja",
+      "name": "야자관리",
+      "desc": "night-study-attendance · QR 체크인",
+      "pages": "https://jeondemo.github.io/night-study-attendance/",
+      "gas": "PASTE_GAS_EXEC_URL",
+      "links": {
+        "github": "https://github.com/jeondemo/night-study-attendance"
+      },
+      "stages": {
+        "pages": {
+          "state": "fail",
+          "ms": 72,
+          "detail": "HTTP 404"
+        },
+        "gas": {
+          "state": "skip",
+          "ms": null,
+          "detail": "GAS URL 미설정"
+        },
+        "data": {
+          "state": "skip",
+          "ms": null,
+          "detail": ""
+        }
+      },
+      "overall": "fail",
+      "streak": 1,
+      "lastOkAt": null,
+      "firstFailAt": "2026-09-21T00:04:25.049Z",
+      "reason": "pages: HTTP 404"
+    },
+    {
+      "id": "student-finder",
+      "name": "학생관리",
+      "desc": "student-finder",
+      "pages": "https://jeondemo.github.io/student-finder/",
+      "gas": "PASTE_GAS_EXEC_URL",
+      "links": {
+        "github": "https://github.com/jeondemo/student-finder"
+      },
+      "stages": {
+        "pages": {
+          "state": "ok",
+          "ms": 110,
+          "detail": "HTTP 200"
+        },
+        "gas": {
+          "state": "skip",
+          "ms": null,
+          "detail": "GAS URL 미설정"
+        },
+        "data": {
+          "state": "skip",
+          "ms": null,
+          "detail": ""
+        }
+      },
+      "overall": "ok",
+      "streak": 0,
+      "lastOkAt": "2026-09-21T00:04:25.049Z",
+      "firstFailAt": null,
+      "reason": ""
+    }
+  ]
+}
