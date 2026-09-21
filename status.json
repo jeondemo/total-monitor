@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-09-21T00:19:01.558Z",
-  "checkedAtKst": "9. 21. 09:19",
+  "checkedAt": "2026-09-21T00:53:32.667Z",
+  "checkedAtKst": "9. 21. 09:53",
   "slowMs": 5000,
   "staleHours": 14,
   "summary": {
-    "ok": 7,
+    "ok": 8,
     "warn": 0,
     "fail": 2
   },
@@ -21,7 +21,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 161,
+          "ms": 176,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -37,7 +37,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:19:01.558Z",
+      "lastOkAt": "2026-09-21T00:53:32.667Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -53,7 +53,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 164,
+          "ms": 237,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -69,7 +69,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:19:01.558Z",
+      "lastOkAt": "2026-09-21T00:53:32.667Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -85,7 +85,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 192,
+          "ms": 221,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -101,7 +101,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:19:01.558Z",
+      "lastOkAt": "2026-09-21T00:53:32.667Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -117,7 +117,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 225,
+          "ms": 227,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -133,7 +133,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:19:01.558Z",
+      "lastOkAt": "2026-09-21T00:53:32.667Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -149,7 +149,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 243,
+          "ms": 203,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -165,7 +165,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:19:01.558Z",
+      "lastOkAt": "2026-09-21T00:53:32.667Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -174,29 +174,29 @@
       "name": "스쿨버스 출석체크",
       "desc": "school-bus-attendance · 알림톡 연동",
       "pages": "https://jeondemo.github.io/school-bus-attendance/",
-      "gas": "PASTE_GAS_EXEC_URL",
+      "gas": "https://script.google.com/macros/s/AKfycbzWOjM293h9y95Kxq8AV0PjNLPzt5vt5uu7pXDHJ5Nfz4wL9EpMaXMreSTHiwcBUPiJ/exec",
       "links": {
         "github": "https://github.com/jeondemo/school-bus-attendance"
       },
       "stages": {
         "pages": {
           "state": "fail",
-          "ms": 55,
+          "ms": 82,
           "detail": "HTTP 404"
         },
         "gas": {
-          "state": "skip",
-          "ms": null,
-          "detail": "GAS URL 미설정"
+          "state": "ok",
+          "ms": 1990,
+          "detail": "v1"
         },
         "data": {
-          "state": "skip",
+          "state": "ok",
           "ms": null,
-          "detail": ""
+          "detail": "sheet 시트1 · rows 96"
         }
       },
       "overall": "fail",
-      "streak": 2,
+      "streak": 3,
       "lastOkAt": null,
       "firstFailAt": "2026-09-21T00:04:25.049Z",
       "reason": "pages: HTTP 404"
@@ -213,7 +213,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 82,
+          "ms": 95,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -229,7 +229,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:19:01.558Z",
+      "lastOkAt": "2026-09-21T00:53:32.667Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -238,32 +238,62 @@
       "name": "야자관리",
       "desc": "night-study-attendance · QR 체크인",
       "pages": "https://jeondemo.github.io/night-study-attendance/",
-      "gas": "PASTE_GAS_EXEC_URL",
+      "gas": "https://script.google.com/macros/s/AKfycbyJ-8CLgaGaXezW1QtoOv3tBLj0KqTcRjHa5k6Oq29rDjEsbUINfnMb01gjseb2Ixn0/exec",
       "links": {
         "github": "https://github.com/jeondemo/night-study-attendance"
       },
       "stages": {
         "pages": {
           "state": "fail",
-          "ms": 51,
+          "ms": 80,
           "detail": "HTTP 404"
         },
         "gas": {
-          "state": "skip",
-          "ms": null,
-          "detail": "GAS URL 미설정"
+          "state": "ok",
+          "ms": 3660,
+          "detail": "v1"
         },
         "data": {
-          "state": "skip",
+          "state": "ok",
           "ms": null,
-          "detail": ""
+          "detail": "sheet 야자로그 · rows 1942 · sheets 13"
         }
       },
       "overall": "fail",
-      "streak": 2,
+      "streak": 3,
       "lastOkAt": null,
       "firstFailAt": "2026-09-21T00:04:25.049Z",
       "reason": "pages: HTTP 404"
+    },
+    {
+      "id": "exam",
+      "name": "시험관리",
+      "desc": "exam-management · 고사 편성·감독 배정",
+      "pages": "",
+      "gas": "https://script.google.com/macros/s/AKfycbyo4DX5OAyTQM0bYi6SkUI3yHP39V-Q7n7xlh0Io2KEO1pcrUaxz7ecPxO68x_oSUam/exec",
+      "links": {},
+      "stages": {
+        "pages": {
+          "state": "none",
+          "ms": null,
+          "detail": "URL 없음"
+        },
+        "gas": {
+          "state": "ok",
+          "ms": 3009,
+          "detail": "v1"
+        },
+        "data": {
+          "state": "ok",
+          "ms": null,
+          "detail": "sheet 설정 · rows 35 · sheets 7"
+        }
+      },
+      "overall": "ok",
+      "streak": 0,
+      "lastOkAt": "2026-09-21T00:53:32.667Z",
+      "firstFailAt": null,
+      "reason": ""
     },
     {
       "id": "student-finder",
@@ -277,7 +307,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 84,
+          "ms": 95,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -293,7 +323,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:19:01.558Z",
+      "lastOkAt": "2026-09-21T00:53:32.667Z",
       "firstFailAt": null,
       "reason": ""
     }
