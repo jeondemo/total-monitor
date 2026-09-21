@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-09-21T01:02:45.803Z",
-  "checkedAtKst": "9. 21. 10:02",
+  "checkedAt": "2026-09-21T02:13:07.760Z",
+  "checkedAtKst": "9. 21. 11:13",
   "slowMs": 5000,
   "staleHours": 14,
   "summary": {
-    "ok": 10,
-    "warn": 0,
+    "ok": 8,
+    "warn": 2,
     "fail": 0
   },
   "apps": [
@@ -14,30 +14,30 @@
       "name": "생기부 프로그램",
       "desc": "chante-diary",
       "pages": "https://jeondemo.github.io/chante-diary/",
-      "gas": "PASTE_GAS_EXEC_URL",
+      "gas": "https://script.google.com/macros/s/AKfycbzqesWKR4hO0Yo4kb0sp4-RdJ3h8d8bmQoUQ4fKDUQfifP7itBSjtj6CTmyReX5rVjl/exec",
       "links": {
         "github": "https://github.com/jeondemo/chante-diary"
       },
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 213,
+          "ms": 223,
           "detail": "HTTP 200"
         },
         "gas": {
-          "state": "skip",
-          "ms": null,
-          "detail": "GAS URL 미설정"
+          "state": "warn",
+          "ms": 8088,
+          "detail": "응답 느림"
         },
         "data": {
-          "state": "skip",
+          "state": "ok",
           "ms": null,
-          "detail": ""
+          "detail": "sheet 과목학생 · rows 5338 · sheets 19"
         }
       },
-      "overall": "ok",
+      "overall": "warn",
       "streak": 0,
-      "lastOkAt": "2026-09-21T01:02:45.803Z",
+      "lastOkAt": "2026-09-21T02:13:07.760Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -53,7 +53,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 241,
+          "ms": 254,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -69,7 +69,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T01:02:45.803Z",
+      "lastOkAt": "2026-09-21T02:13:07.760Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -85,7 +85,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 266,
+          "ms": 279,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -101,7 +101,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T01:02:45.803Z",
+      "lastOkAt": "2026-09-21T02:13:07.760Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -117,7 +117,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 225,
+          "ms": 429,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -133,7 +133,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T01:02:45.803Z",
+      "lastOkAt": "2026-09-21T02:13:07.760Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -149,7 +149,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 199,
+          "ms": 282,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -165,7 +165,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T01:02:45.803Z",
+      "lastOkAt": "2026-09-21T02:13:07.760Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -184,7 +184,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 2765,
+          "ms": 2176,
           "detail": "v1"
         },
         "data": {
@@ -195,7 +195,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T01:02:45.803Z",
+      "lastOkAt": "2026-09-21T02:13:07.760Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -204,30 +204,30 @@
       "name": "진학상담 프로그램",
       "desc": "sangdam",
       "pages": "https://jeondemo.github.io/sangdam/",
-      "gas": "PASTE_GAS_EXEC_URL",
+      "gas": "https://script.google.com/macros/s/AKfycbzxy7GmMQSLAatWCKaxDMrwzFXSSOPxJFk4NKskGwgchR3Ma8mwS0fDYeYimOLdRSCBew/exec",
       "links": {
         "github": "https://github.com/jeondemo/sangdam"
       },
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 134,
+          "ms": 143,
           "detail": "HTTP 200"
         },
         "gas": {
-          "state": "skip",
-          "ms": null,
-          "detail": "GAS URL 미설정"
+          "state": "ok",
+          "ms": 3093,
+          "detail": "v1"
         },
         "data": {
-          "state": "skip",
+          "state": "ok",
           "ms": null,
-          "detail": ""
+          "detail": "sheet 설정 · rows 15 · sheets 7"
         }
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T01:02:45.803Z",
+      "lastOkAt": "2026-09-21T02:13:07.760Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -246,7 +246,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 3855,
+          "ms": 4669,
           "detail": "v1"
         },
         "data": {
@@ -257,7 +257,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T01:02:45.803Z",
+      "lastOkAt": "2026-09-21T02:13:07.760Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -276,7 +276,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 4112,
+          "ms": 4373,
           "detail": "v1"
         },
         "data": {
@@ -287,7 +287,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T01:02:45.803Z",
+      "lastOkAt": "2026-09-21T02:13:07.760Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -296,30 +296,30 @@
       "name": "학생관리",
       "desc": "student-finder",
       "pages": "https://jeondemo.github.io/student-finder/",
-      "gas": "PASTE_GAS_EXEC_URL",
+      "gas": "https://script.google.com/macros/s/AKfycbzgSO9kkIeM71XVBmdrPJe5AeJaUAjtGUAIwcxljXPyR65w7oxprKjQs0zM4KTqOcuz/exec",
       "links": {
         "github": "https://github.com/jeondemo/student-finder"
       },
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 138,
+          "ms": 159,
           "detail": "HTTP 200"
         },
         "gas": {
-          "state": "skip",
-          "ms": null,
-          "detail": "GAS URL 미설정"
+          "state": "warn",
+          "ms": 5531,
+          "detail": "응답 느림"
         },
         "data": {
-          "state": "skip",
+          "state": "ok",
           "ms": null,
-          "detail": ""
+          "detail": "sheet 학생정보 · rows 275 · sheets 16"
         }
       },
-      "overall": "ok",
+      "overall": "warn",
       "streak": 0,
-      "lastOkAt": "2026-09-21T01:02:45.803Z",
+      "lastOkAt": "2026-09-21T02:13:07.760Z",
       "firstFailAt": null,
       "reason": ""
     }
