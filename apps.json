@@ -11,21 +11,37 @@
       "gas": "PASTE_GAS_EXEC_URL",
       "links": { "github": "https://github.com/jeondemo/chante-diary" }
     },
-    {
-      "id": "neis-check-teacher",
-      "name": "생기부 점검기 · 교사용",
+        {
+      "id": "neis-check-gw-admin",
+      "name": "생기부 점검기 · 여고 관리자용",
       "desc": "neis-check · 브라우저 전용",
       "pages": "https://jeondemo.github.io/neis-check/",
       "gas": "",
       "links": { "github": "https://github.com/jeondemo/neis-check" }
     },
     {
-      "id": "neis-check-admin",
-      "name": "생기부 점검기 · 관리자용",
-      "desc": "neis-check-admin · 브라우저 전용",
-      "pages": "https://jeondemo.github.io/neis-check-admin/",
+      "id": "neis-check-gw-teacher",
+      "name": "생기부 점검기 · 여고 교사용",
+      "desc": "neis-check-teacher · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check-teacher/",
       "gas": "",
-      "links": { "github": "https://github.com/jeondemo/neis-check-admin" }
+      "links": { "github": "https://github.com/jeondemo/neis-check-teacher" }
+    },
+    {
+      "id": "neis-check-fl-admin",
+      "name": "생기부 점검기 · 외고 관리자용",
+      "desc": "neis-check-gcfl · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check-gcfl/",
+      "gas": "",
+      "links": { "github": "https://github.com/jeondemo/neis-check-gcfl" }
+    },
+    {
+      "id": "neis-check-fl-teacher",
+      "name": "생기부 점검기 · 외고 교사용",
+      "desc": "neis-check-gcflteacher · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check-gcflteacher/",
+      "gas": "",
+      "links": { "github": "https://github.com/jeondemo/neis-check-gcflteacher" }
     },
     {
       "id": "school-bus",
