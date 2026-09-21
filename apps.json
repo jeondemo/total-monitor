@@ -47,9 +47,9 @@
       "id": "school-bus",
       "name": "스쿨버스 출석체크",
       "desc": "school-bus-attendance · 알림톡 연동",
-      "pages": "https://jeondemo.github.io/school-bus-attendance/",
+      "pages": "",
       "gas": "https://script.google.com/macros/s/AKfycbzWOjM293h9y95Kxq8AV0PjNLPzt5vt5uu7pXDHJ5Nfz4wL9EpMaXMreSTHiwcBUPiJ/exec",
-      "links": { "github": "https://github.com/jeondemo/school-bus-attendance" }
+      "links": {}
     },
     {
       "id": "sangdam",
@@ -63,9 +63,9 @@
       "id": "yaja",
       "name": "야자관리",
       "desc": "night-study-attendance · QR 체크인",
-      "pages": "https://jeondemo.github.io/night-study-attendance/",
+      "pages": "",
       "gas": "https://script.google.com/macros/s/AKfycbyJ-8CLgaGaXezW1QtoOv3tBLj0KqTcRjHa5k6Oq29rDjEsbUINfnMb01gjseb2Ixn0/exec",
-      "links": { "github": "https://github.com/jeondemo/night-study-attendance" }
+      "links": {}
     },
     {
       "id": "exam",
