@@ -1,44 +1,14 @@
 {
-  "checkedAt": "2026-09-21T02:28:19.022Z",
-  "checkedAtKst": "9. 21. 11:28",
+  "checkedAt": "2026-09-21T02:31:05.781Z",
+  "checkedAtKst": "9. 21. 11:31",
   "slowMs": 10000,
   "staleHours": 14,
   "summary": {
     "ok": 9,
-    "warn": 1,
+    "warn": 0,
     "fail": 1
   },
   "apps": [
-    {
-      "id": "test-fail",
-      "name": "알림 테스트",
-      "desc": "일부러 틀린 주소",
-      "pages": "https://jeondemo.github.io/this-does-not-exist/",
-      "gas": "",
-      "links": {},
-      "stages": {
-        "pages": {
-          "state": "fail",
-          "ms": 187,
-          "detail": "HTTP 404"
-        },
-        "gas": {
-          "state": "none",
-          "ms": null,
-          "detail": "GAS 없음"
-        },
-        "data": {
-          "state": "none",
-          "ms": null,
-          "detail": ""
-        }
-      },
-      "overall": "fail",
-      "streak": 1,
-      "lastOkAt": null,
-      "firstFailAt": "2026-09-21T02:28:19.022Z",
-      "reason": "pages: HTTP 404"
-    },
     {
       "id": "chante-diary",
       "name": "생기부 프로그램",
@@ -51,13 +21,13 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 167,
+          "ms": 245,
           "detail": "HTTP 200"
         },
         "gas": {
-          "state": "warn",
-          "ms": 10945,
-          "detail": "응답 느림"
+          "state": "ok",
+          "ms": 9104,
+          "detail": "v1"
         },
         "data": {
           "state": "ok",
@@ -65,9 +35,9 @@
           "detail": "sheet 과목학생 · rows 5338 · sheets 19"
         }
       },
-      "overall": "warn",
+      "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T02:28:19.022Z",
+      "lastOkAt": "2026-09-21T02:31:05.781Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -83,7 +53,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 256,
+          "ms": 282,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -99,7 +69,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T02:28:19.022Z",
+      "lastOkAt": "2026-09-21T02:31:05.781Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -115,7 +85,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 205,
+          "ms": 291,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -131,7 +101,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T02:28:19.022Z",
+      "lastOkAt": "2026-09-21T02:31:05.781Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -147,7 +117,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 283,
+          "ms": 274,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -163,7 +133,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T02:28:19.022Z",
+      "lastOkAt": "2026-09-21T02:31:05.781Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -179,7 +149,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 276,
+          "ms": 217,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -195,7 +165,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T02:28:19.022Z",
+      "lastOkAt": "2026-09-21T02:31:05.781Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -214,7 +184,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 2177,
+          "ms": 2557,
           "detail": "v1"
         },
         "data": {
@@ -225,7 +195,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T02:28:19.022Z",
+      "lastOkAt": "2026-09-21T02:31:05.781Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -241,12 +211,12 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 135,
+          "ms": 169,
           "detail": "HTTP 200"
         },
         "gas": {
           "state": "ok",
-          "ms": 3517,
+          "ms": 3616,
           "detail": "v1"
         },
         "data": {
@@ -257,7 +227,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T02:28:19.022Z",
+      "lastOkAt": "2026-09-21T02:31:05.781Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -276,7 +246,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 5243,
+          "ms": 6367,
           "detail": "v1"
         },
         "data": {
@@ -287,7 +257,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T02:28:19.022Z",
+      "lastOkAt": "2026-09-21T02:31:05.781Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -305,21 +275,21 @@
           "detail": "URL 없음"
         },
         "gas": {
-          "state": "ok",
-          "ms": 3688,
-          "detail": "v1"
+          "state": "fail",
+          "ms": 20002,
+          "detail": "timeout 20s"
         },
         "data": {
-          "state": "ok",
+          "state": "skip",
           "ms": null,
-          "detail": "sheet 설정 · rows 35 · sheets 7"
+          "detail": "건너뜀"
         }
       },
-      "overall": "ok",
-      "streak": 0,
+      "overall": "fail",
+      "streak": 1,
       "lastOkAt": "2026-09-21T02:28:19.022Z",
-      "firstFailAt": null,
-      "reason": ""
+      "firstFailAt": "2026-09-21T02:31:05.781Z",
+      "reason": "gas: timeout 20s"
     },
     {
       "id": "student-finder",
@@ -333,12 +303,12 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 134,
+          "ms": 184,
           "detail": "HTTP 200"
         },
         "gas": {
           "state": "ok",
-          "ms": 3937,
+          "ms": 5414,
           "detail": "v1"
         },
         "data": {
@@ -349,7 +319,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T02:28:19.022Z",
+      "lastOkAt": "2026-09-21T02:31:05.781Z",
       "firstFailAt": null,
       "reason": ""
     }
