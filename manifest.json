@@ -1,0 +1,11 @@
+{
+  "name": "앱 상태 모니터",
+  "short_name": "앱 모니터",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1B1B1A",
+  "theme_color": "#1B1B1A",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
