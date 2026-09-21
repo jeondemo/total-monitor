@@ -7,8 +7,8 @@
       "id": "chante-diary",
       "name": "생기부 프로그램",
       "desc": "chante-diary",
-      "pages": "https://jeondemo.github.io/chante-diary/",
-      "gas": "PASTE_GAS_EXEC_URL",
+            "pages": "https://jeondemo.github.io/chante-diary/",
+      "gas": "https://script.google.com/macros/s/AKfycbzqesWKR4hO0Yo4kb0sp4-RdJ3h8d8bmQoUQ4fKDUQfifP7itBSjtj6CTmyReX5rVjl/exec",
       "links": { "github": "https://github.com/jeondemo/chante-diary" }
     },
     {
@@ -79,8 +79,8 @@
       "id": "student-finder",
       "name": "학생관리",
       "desc": "student-finder",
-      "pages": "https://jeondemo.github.io/student-finder/",
-      "gas": "PASTE_GAS_EXEC_URL",
+            "pages": "https://jeondemo.github.io/student-finder/",
+      "gas": "https://script.google.com/macros/s/AKfycbzgSO9kkIeM71XVBmdrPJe5AeJaUAjtGUAIwcxljXPyR65w7oxprKjQs0zM4KTqOcuz/exec",
       "links": { "github": "https://github.com/jeondemo/student-finder" }
     }
   ]
