@@ -3,15 +3,7 @@
   "timeoutMs": 20000,
   "staleHours": 14,
   "apps": [
-    {
-      "id": "test-fail",
-      "name": "알림 테스트",
-      "desc": "일부러 틀린 주소",
-      "pages": "https://jeondemo.github.io/this-does-not-exist/",
-      "gas": "",
-      "links": {}
-    },
-    {
+        {
       "id": "chante-diary",
       "name": "생기부 프로그램",
       "desc": "chante-diary",
