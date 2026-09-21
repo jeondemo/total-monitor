@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-09-21T00:04:25.049Z",
-  "checkedAtKst": "9. 21. 09:04",
+  "checkedAt": "2026-09-21T00:19:01.558Z",
+  "checkedAtKst": "9. 21. 09:19",
   "slowMs": 5000,
   "staleHours": 14,
   "summary": {
-    "ok": 4,
+    "ok": 7,
     "warn": 0,
-    "fail": 3
+    "fail": 2
   },
   "apps": [
     {
@@ -21,7 +21,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 187,
+          "ms": 161,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -37,13 +37,13 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:04:25.049Z",
+      "lastOkAt": "2026-09-21T00:19:01.558Z",
       "firstFailAt": null,
       "reason": ""
     },
     {
-      "id": "neis-check-teacher",
-      "name": "생기부 점검기 · 교사용",
+      "id": "neis-check-gw-admin",
+      "name": "생기부 점검기 · 여고 관리자용",
       "desc": "neis-check · 브라우저 전용",
       "pages": "https://jeondemo.github.io/neis-check/",
       "gas": "",
@@ -53,7 +53,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 194,
+          "ms": 164,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -69,24 +69,24 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:04:25.049Z",
+      "lastOkAt": "2026-09-21T00:19:01.558Z",
       "firstFailAt": null,
       "reason": ""
     },
     {
-      "id": "neis-check-admin",
-      "name": "생기부 점검기 · 관리자용",
-      "desc": "neis-check-admin · 브라우저 전용",
-      "pages": "https://jeondemo.github.io/neis-check-admin/",
+      "id": "neis-check-gw-teacher",
+      "name": "생기부 점검기 · 여고 교사용",
+      "desc": "neis-check-teacher · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check-teacher/",
       "gas": "",
       "links": {
-        "github": "https://github.com/jeondemo/neis-check-admin"
+        "github": "https://github.com/jeondemo/neis-check-teacher"
       },
       "stages": {
         "pages": {
-          "state": "fail",
-          "ms": 75,
-          "detail": "HTTP 404"
+          "state": "ok",
+          "ms": 192,
+          "detail": "HTTP 200"
         },
         "gas": {
           "state": "none",
@@ -99,11 +99,75 @@
           "detail": ""
         }
       },
-      "overall": "fail",
-      "streak": 1,
-      "lastOkAt": null,
-      "firstFailAt": "2026-09-21T00:04:25.049Z",
-      "reason": "pages: HTTP 404"
+      "overall": "ok",
+      "streak": 0,
+      "lastOkAt": "2026-09-21T00:19:01.558Z",
+      "firstFailAt": null,
+      "reason": ""
+    },
+    {
+      "id": "neis-check-fl-admin",
+      "name": "생기부 점검기 · 외고 관리자용",
+      "desc": "neis-check-gcfl · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check-gcfl/",
+      "gas": "",
+      "links": {
+        "github": "https://github.com/jeondemo/neis-check-gcfl"
+      },
+      "stages": {
+        "pages": {
+          "state": "ok",
+          "ms": 225,
+          "detail": "HTTP 200"
+        },
+        "gas": {
+          "state": "none",
+          "ms": null,
+          "detail": "GAS 없음"
+        },
+        "data": {
+          "state": "none",
+          "ms": null,
+          "detail": ""
+        }
+      },
+      "overall": "ok",
+      "streak": 0,
+      "lastOkAt": "2026-09-21T00:19:01.558Z",
+      "firstFailAt": null,
+      "reason": ""
+    },
+    {
+      "id": "neis-check-fl-teacher",
+      "name": "생기부 점검기 · 외고 교사용",
+      "desc": "neis-check-gcflteacher · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check-gcflteacher/",
+      "gas": "",
+      "links": {
+        "github": "https://github.com/jeondemo/neis-check-gcflteacher"
+      },
+      "stages": {
+        "pages": {
+          "state": "ok",
+          "ms": 243,
+          "detail": "HTTP 200"
+        },
+        "gas": {
+          "state": "none",
+          "ms": null,
+          "detail": "GAS 없음"
+        },
+        "data": {
+          "state": "none",
+          "ms": null,
+          "detail": ""
+        }
+      },
+      "overall": "ok",
+      "streak": 0,
+      "lastOkAt": "2026-09-21T00:19:01.558Z",
+      "firstFailAt": null,
+      "reason": ""
     },
     {
       "id": "school-bus",
@@ -117,7 +181,7 @@
       "stages": {
         "pages": {
           "state": "fail",
-          "ms": 74,
+          "ms": 55,
           "detail": "HTTP 404"
         },
         "gas": {
@@ -132,7 +196,7 @@
         }
       },
       "overall": "fail",
-      "streak": 1,
+      "streak": 2,
       "lastOkAt": null,
       "firstFailAt": "2026-09-21T00:04:25.049Z",
       "reason": "pages: HTTP 404"
@@ -149,7 +213,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 91,
+          "ms": 82,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -165,7 +229,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:04:25.049Z",
+      "lastOkAt": "2026-09-21T00:19:01.558Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -181,7 +245,7 @@
       "stages": {
         "pages": {
           "state": "fail",
-          "ms": 72,
+          "ms": 51,
           "detail": "HTTP 404"
         },
         "gas": {
@@ -196,7 +260,7 @@
         }
       },
       "overall": "fail",
-      "streak": 1,
+      "streak": 2,
       "lastOkAt": null,
       "firstFailAt": "2026-09-21T00:04:25.049Z",
       "reason": "pages: HTTP 404"
@@ -213,7 +277,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 110,
+          "ms": 84,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -229,7 +293,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-21T00:04:25.049Z",
+      "lastOkAt": "2026-09-21T00:19:01.558Z",
       "firstFailAt": null,
       "reason": ""
     }
