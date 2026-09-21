@@ -1,6 +1,6 @@
 {
   "slowMs": 10000,
-  "timeoutMs": 20000,
+  "timeoutMs": 30000,
   "staleHours": 14,
   "apps": [
         {
