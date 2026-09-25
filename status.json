@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-09-25T00:18:22.751Z",
-  "checkedAtKst": "9. 25. 09:18",
+  "checkedAt": "2026-09-25T12:42:04.341Z",
+  "checkedAtKst": "9. 25. 21:42",
   "slowMs": 10000,
   "staleHours": 14,
   "summary": {
-    "ok": 10,
+    "ok": 8,
     "warn": 0,
-    "fail": 0
+    "fail": 2
   },
   "apps": [
     {
@@ -21,25 +21,25 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 190,
+          "ms": 267,
           "detail": "HTTP 200"
         },
         "gas": {
-          "state": "ok",
-          "ms": 4229,
-          "detail": "v1"
+          "state": "fail",
+          "ms": 30001,
+          "detail": "timeout 30s"
         },
         "data": {
-          "state": "ok",
+          "state": "skip",
           "ms": null,
-          "detail": "sheet 과목학생 · rows 5338 · sheets 19"
+          "detail": "건너뜀"
         }
       },
-      "overall": "ok",
-      "streak": 0,
+      "overall": "fail",
+      "streak": 1,
       "lastOkAt": "2026-09-25T00:18:22.751Z",
-      "firstFailAt": null,
-      "reason": ""
+      "firstFailAt": "2026-09-25T12:42:04.341Z",
+      "reason": "gas: timeout 30s"
     },
     {
       "id": "neis-check-gw-admin",
@@ -53,7 +53,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 222,
+          "ms": 347,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -69,7 +69,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-25T00:18:22.751Z",
+      "lastOkAt": "2026-09-25T12:42:04.341Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -85,7 +85,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 242,
+          "ms": 460,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -101,7 +101,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-25T00:18:22.751Z",
+      "lastOkAt": "2026-09-25T12:42:04.341Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -117,7 +117,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 232,
+          "ms": 325,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -133,7 +133,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-25T00:18:22.751Z",
+      "lastOkAt": "2026-09-25T12:42:04.341Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -149,7 +149,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 254,
+          "ms": 412,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -165,7 +165,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-25T00:18:22.751Z",
+      "lastOkAt": "2026-09-25T12:42:04.341Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -184,7 +184,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 2397,
+          "ms": 2873,
           "detail": "v1"
         },
         "data": {
@@ -195,7 +195,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-25T00:18:22.751Z",
+      "lastOkAt": "2026-09-25T12:42:04.341Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -211,12 +211,12 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 113,
+          "ms": 178,
           "detail": "HTTP 200"
         },
         "gas": {
           "state": "ok",
-          "ms": 3676,
+          "ms": 5044,
           "detail": "v1"
         },
         "data": {
@@ -227,7 +227,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-25T00:18:22.751Z",
+      "lastOkAt": "2026-09-25T12:42:04.341Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -246,7 +246,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 6381,
+          "ms": 5754,
           "detail": "v1"
         },
         "data": {
@@ -257,7 +257,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-25T00:18:22.751Z",
+      "lastOkAt": "2026-09-25T12:42:04.341Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -275,21 +275,21 @@
           "detail": "URL 없음"
         },
         "gas": {
-          "state": "ok",
-          "ms": 5243,
-          "detail": "v1"
+          "state": "fail",
+          "ms": 30001,
+          "detail": "timeout 30s"
         },
         "data": {
-          "state": "ok",
+          "state": "skip",
           "ms": null,
-          "detail": "sheet 설정 · rows 35 · sheets 7"
+          "detail": "건너뜀"
         }
       },
-      "overall": "ok",
-      "streak": 0,
+      "overall": "fail",
+      "streak": 1,
       "lastOkAt": "2026-09-25T00:18:22.751Z",
-      "firstFailAt": null,
-      "reason": ""
+      "firstFailAt": "2026-09-25T12:42:04.341Z",
+      "reason": "gas: timeout 30s"
     },
     {
       "id": "student-finder",
@@ -303,12 +303,12 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 171,
+          "ms": 181,
           "detail": "HTTP 200"
         },
         "gas": {
           "state": "ok",
-          "ms": 5968,
+          "ms": 9278,
           "detail": "v1"
         },
         "data": {
@@ -319,7 +319,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-09-25T00:18:22.751Z",
+      "lastOkAt": "2026-09-25T12:42:04.341Z",
       "firstFailAt": null,
       "reason": ""
     }
