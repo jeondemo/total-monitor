@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-06T14:06:06.471Z",
-  "checkedAtKst": "10. 6. 23:06",
+  "checkedAt": "2026-10-07T01:13:55.187Z",
+  "checkedAtKst": "10. 7. 10:13",
   "slowMs": 10000,
   "staleHours": 14,
   "summary": {
@@ -21,12 +21,12 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 513,
+          "ms": 350,
           "detail": "HTTP 200"
         },
         "gas": {
           "state": "ok",
-          "ms": 7445,
+          "ms": 7551,
           "detail": "v1"
         },
         "data": {
@@ -37,7 +37,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-06T14:06:06.471Z",
+      "lastOkAt": "2026-10-07T01:13:55.187Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -53,7 +53,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 968,
+          "ms": 276,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -69,7 +69,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-06T14:06:06.471Z",
+      "lastOkAt": "2026-10-07T01:13:55.187Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -85,7 +85,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 273,
+          "ms": 226,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -101,7 +101,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-06T14:06:06.471Z",
+      "lastOkAt": "2026-10-07T01:13:55.187Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -113,38 +113,6 @@
       "gas": "",
       "links": {
         "github": "https://github.com/jeondemo/neis-check-gcfl"
-      },
-      "stages": {
-        "pages": {
-          "state": "ok",
-          "ms": 256,
-          "detail": "HTTP 200"
-        },
-        "gas": {
-          "state": "none",
-          "ms": null,
-          "detail": "GAS 없음"
-        },
-        "data": {
-          "state": "none",
-          "ms": null,
-          "detail": ""
-        }
-      },
-      "overall": "ok",
-      "streak": 0,
-      "lastOkAt": "2026-10-06T14:06:06.471Z",
-      "firstFailAt": null,
-      "reason": ""
-    },
-    {
-      "id": "neis-check-fl-teacher",
-      "name": "생기부 점검기 · 외고 교사용",
-      "desc": "neis-check-gcflteacher · 브라우저 전용",
-      "pages": "https://jeondemo.github.io/neis-check-gcflteacher/",
-      "gas": "",
-      "links": {
-        "github": "https://github.com/jeondemo/neis-check-gcflteacher"
       },
       "stages": {
         "pages": {
@@ -165,7 +133,39 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-06T14:06:06.471Z",
+      "lastOkAt": "2026-10-07T01:13:55.187Z",
+      "firstFailAt": null,
+      "reason": ""
+    },
+    {
+      "id": "neis-check-fl-teacher",
+      "name": "생기부 점검기 · 외고 교사용",
+      "desc": "neis-check-gcflteacher · 브라우저 전용",
+      "pages": "https://jeondemo.github.io/neis-check-gcflteacher/",
+      "gas": "",
+      "links": {
+        "github": "https://github.com/jeondemo/neis-check-gcflteacher"
+      },
+      "stages": {
+        "pages": {
+          "state": "ok",
+          "ms": 279,
+          "detail": "HTTP 200"
+        },
+        "gas": {
+          "state": "none",
+          "ms": null,
+          "detail": "GAS 없음"
+        },
+        "data": {
+          "state": "none",
+          "ms": null,
+          "detail": ""
+        }
+      },
+      "overall": "ok",
+      "streak": 0,
+      "lastOkAt": "2026-10-07T01:13:55.187Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -184,7 +184,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 2202,
+          "ms": 2214,
           "detail": "v1"
         },
         "data": {
@@ -195,7 +195,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-06T14:06:06.471Z",
+      "lastOkAt": "2026-10-07T01:13:55.187Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -211,12 +211,12 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 150,
+          "ms": 159,
           "detail": "HTTP 200"
         },
         "gas": {
           "state": "ok",
-          "ms": 3025,
+          "ms": 4174,
           "detail": "v1"
         },
         "data": {
@@ -227,7 +227,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-06T14:06:06.471Z",
+      "lastOkAt": "2026-10-07T01:13:55.187Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -246,7 +246,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 4854,
+          "ms": 6146,
           "detail": "v1"
         },
         "data": {
@@ -257,7 +257,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-06T14:06:06.471Z",
+      "lastOkAt": "2026-10-07T01:13:55.187Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -276,7 +276,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 4965,
+          "ms": 3674,
           "detail": "v1"
         },
         "data": {
@@ -287,7 +287,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-06T14:06:06.471Z",
+      "lastOkAt": "2026-10-07T01:13:55.187Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -303,12 +303,12 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 740,
+          "ms": 159,
           "detail": "HTTP 200"
         },
         "gas": {
           "state": "ok",
-          "ms": 7334,
+          "ms": 3151,
           "detail": "v1"
         },
         "data": {
@@ -319,7 +319,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-06T14:06:06.471Z",
+      "lastOkAt": "2026-10-07T01:13:55.187Z",
       "firstFailAt": null,
       "reason": ""
     }
