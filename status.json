@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-30T01:36:23.678Z",
-  "checkedAtKst": "10. 30. 10:36",
+  "checkedAt": "2026-10-30T13:57:26.594Z",
+  "checkedAtKst": "10. 30. 22:57",
   "slowMs": 10000,
   "staleHours": 14,
   "summary": {
@@ -21,12 +21,12 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 212,
+          "ms": 271,
           "detail": "HTTP 200"
         },
         "gas": {
           "state": "ok",
-          "ms": 7243,
+          "ms": 8939,
           "detail": "v1"
         },
         "data": {
@@ -37,7 +37,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-30T01:36:23.678Z",
+      "lastOkAt": "2026-10-30T13:57:26.594Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -53,7 +53,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 271,
+          "ms": 249,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -69,7 +69,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-30T01:36:23.678Z",
+      "lastOkAt": "2026-10-30T13:57:26.594Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -85,7 +85,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 630,
+          "ms": 518,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -101,7 +101,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-30T01:36:23.678Z",
+      "lastOkAt": "2026-10-30T13:57:26.594Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -117,7 +117,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 262,
+          "ms": 538,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -133,7 +133,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-30T01:36:23.678Z",
+      "lastOkAt": "2026-10-30T13:57:26.594Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -149,7 +149,7 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 277,
+          "ms": 551,
           "detail": "HTTP 200"
         },
         "gas": {
@@ -165,7 +165,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-30T01:36:23.678Z",
+      "lastOkAt": "2026-10-30T13:57:26.594Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -184,7 +184,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 2795,
+          "ms": 2518,
           "detail": "v1"
         },
         "data": {
@@ -195,7 +195,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-30T01:36:23.678Z",
+      "lastOkAt": "2026-10-30T13:57:26.594Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -211,12 +211,12 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 182,
+          "ms": 197,
           "detail": "HTTP 200"
         },
         "gas": {
           "state": "ok",
-          "ms": 3150,
+          "ms": 5807,
           "detail": "v1"
         },
         "data": {
@@ -227,7 +227,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-30T01:36:23.678Z",
+      "lastOkAt": "2026-10-30T13:57:26.594Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -246,18 +246,18 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 4050,
+          "ms": 3405,
           "detail": "v1"
         },
         "data": {
           "state": "ok",
           "ms": null,
-          "detail": "sheet 야자로그 · rows 2266 · sheets 13"
+          "detail": "sheet 야자로그 · rows 2279 · sheets 13"
         }
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-30T01:36:23.678Z",
+      "lastOkAt": "2026-10-30T13:57:26.594Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -276,7 +276,7 @@
         },
         "gas": {
           "state": "ok",
-          "ms": 2926,
+          "ms": 3924,
           "detail": "v1"
         },
         "data": {
@@ -287,7 +287,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-30T01:36:23.678Z",
+      "lastOkAt": "2026-10-30T13:57:26.594Z",
       "firstFailAt": null,
       "reason": ""
     },
@@ -303,12 +303,12 @@
       "stages": {
         "pages": {
           "state": "ok",
-          "ms": 139,
+          "ms": 273,
           "detail": "HTTP 200"
         },
         "gas": {
           "state": "ok",
-          "ms": 6005,
+          "ms": 6579,
           "detail": "v1"
         },
         "data": {
@@ -319,7 +319,7 @@
       },
       "overall": "ok",
       "streak": 0,
-      "lastOkAt": "2026-10-30T01:36:23.678Z",
+      "lastOkAt": "2026-10-30T13:57:26.594Z",
       "firstFailAt": null,
       "reason": ""
     }
